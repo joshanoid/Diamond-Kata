@@ -4,7 +4,7 @@ import "./index.css";
 
 export const Main = () => {
     const [letter, setLetter] = React.useState("");
-    const diamond = generateDiamond(letter);
+    const diamond = React.useMemo(() => generateDiamond(letter), [letter]);
 
     const handleLetterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const input = event.target.value;
@@ -20,7 +20,9 @@ export const Main = () => {
             <h1>Diamond Kata</h1>
             <input type="text" value={letter} onChange={handleLetterChange} placeholder="Letter of the diamond" />
             <h2>Result</h2>
-            <div className="result">{diamond}</div>
+            <div className="result">
+                <pre>{diamond}</pre>
+            </div>
         </div>
     );
 };
