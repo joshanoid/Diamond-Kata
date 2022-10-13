@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# The Diamond Kata
+
+Given a character from the alphabet, print a diamond of its output with that character being the midpoint of the diamond.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
